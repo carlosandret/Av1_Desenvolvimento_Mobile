@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 219, 18, 159),
         ),
       ),
+      themeMode: ThemeMode.light,
       home: const Navigation(),
     );
   }

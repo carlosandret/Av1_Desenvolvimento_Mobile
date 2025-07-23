@@ -21,6 +21,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       // Barra do app = (header)
       appBar: AppBar(
+        centerTitle: true,
         title: Text('Discovery', style: TextStyle(color: Colors.white)),
         backgroundColor: AppColors.backgroundColorAppBar,
       ),
