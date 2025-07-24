@@ -1,4 +1,5 @@
-import 'package:avaliacao_app/home/home_page.dart';
+import 'package:avaliacao_app/_constante/app_colors.dart';
+import 'package:avaliacao_app/home/discovery.dart';
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {
@@ -15,7 +16,7 @@ class _NavigationState extends State<Navigation> {
     return Scaffold(
       bottomNavigationBar: BottomNavigationBar(
         
-        fixedColor: Color.fromARGB(255, 71, 90, 197),
+        fixedColor: AppColors.backgroundColorIcone,
         showUnselectedLabels: true,
         unselectedItemColor: Colors.black,
         onTap: (value) => setState(() {

@@ -1,7 +1,12 @@
-import 'package:avaliacao_app/home/home_page.dart';
+import 'package:avaliacao_app/home/discovery.dart';
 import 'package:avaliacao_app/navigation/navigation.dart';
+import 'package:avaliacao_app/pages/bar_hotels.dart';
+import 'package:avaliacao_app/pages/cafes.dart';
+import 'package:avaliacao_app/pages/fast_foods.dart';
+import 'package:avaliacao_app/pages/featured_foods.dart';
+import 'package:avaliacao_app/pages/fine_dining.dart';
+import 'package:avaliacao_app/pages/nearby_map.dart';
 import 'package:flutter/material.dart';
-import 'pages/pagina2.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,8 +22,12 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       routes: {
         '/home': (context) => MyHomePage(),
-        '/pagina2': (context) => Pagina2(),
-        '/pagina3': (context) => pagina3(),
+        '/bar_hotel': (context) => BarHotels(),
+        '/cafes': (context) => Cafes(),
+        '/nearby_map': (context) => NearbyMap(),
+        '/fast_foods': (context) => FastFoods(),
+        '/featured_foods': (context) => FeaturedFoods(),
+        '/fine_dining': (context) => FineDining()
       },
 
       theme: ThemeData(
@@ -31,74 +40,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-
-
-class pagina3 extends StatefulWidget {
-  const pagina3({super.key});
-
-  @override
-  State<pagina3> createState() => _pagina3State();
-}
-
-class _pagina3State extends State<pagina3> {
-  @override
-  Widget build(BuildContext context) {
-    return DefaultTabController(
-      initialIndex: 1,
-      length: 2,
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("Página 3"),
-          bottom: const TabBar(
-            tabs: [
-              Tab(icon: Icon(Icons.abc_rounded)),
-              Tab(icon: Icon(Icons.abc_sharp)),
-            ],
-          ),
-        ),
-        body: const TabBarView(children: [Text("Botao"), Text("Botao 2")]),
-      ),
-    );
-  }
-}
-
-
-
-
-// class DestaqueCardSimples extends StatefulWidget {
-//   final String texto;
-//   final VoidCallback onTap;
-
-//   const DestaqueCardSimples({required this.texto, required this.onTap});
-
-//   @override
-//   _DestaqueCardSimplesState createState() => _DestaqueCardSimplesState();
-// }
-
-// class _DestaqueCardSimplesState extends State<DestaqueCardSimples> {
-//   bool _pressed = false;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return GestureDetector(
-//       onTap: widget.onTap,
-//       onTapDown: (_) => setState(() => _pressed = true),
-//       onTapUp: (_) => setState(() => _pressed = false),
-//       onTapCancel: () => setState(() => _pressed = false),
-//       child: AnimatedContainer(
-//         duration: Duration(milliseconds: 100),
-//         decoration: BoxDecoration(
-//           color: _pressed ? Colors.red[700] : Colors.red,
-//           borderRadius: BorderRadius.circular(12),
-//         ),
-//         alignment: Alignment.center,
-//         child: Text(
-//           widget.texto,
-//           style: TextStyle(color: Colors.white, fontSize: 18),
-//           textAlign: TextAlign.center,
-//         ),
-//       ),
-//     );
-//   }
-// }

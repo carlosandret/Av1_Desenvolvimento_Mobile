@@ -28,6 +28,7 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  google_maps_flutter: ^2.12.3
   flutter:
     sdk: flutter
 
@@ -59,8 +60,13 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/images/posto.png
-    - assets/images/cafeteria.jpg
+    - assets/images/bandeja.png
+    - assets/images/bebida.png
+    - assets/images/cafeteria.png
+    - assets/images/fast_food.png
+    - assets/images/map.png
+    - assets/images/pizza.png
+
     # - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
